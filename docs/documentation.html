@@ -50,6 +50,16 @@
         td {
             vertical-align: middle !important;
         }
+
+        input[readonly] {
+            background: #eeeeee;
+        }
+
+        .result {
+            background: #e8f5e9;
+            border-radius: 10px;
+            padding: 20px;
+        }
     </style>
 
     <!-- MathJax.js -->
@@ -5579,6 +5589,244 @@
         </div>
     </section>
 
+    <section class="card mb-4 shadow-sm">
+        <div class="card-header">
+            Calculators
+        </div>
+        <div class="card-body">
+            <section class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    Agricultural Water & AWG Calculator
+                </div>
+                <div class="card-body">
+                    <h5>1 - Agricultural Farm Data</h5>
+
+                    <label>
+                    Farmed Area (m²)
+                    </label>
+
+                    <input
+                    class="form-control mb-3"
+                    type="number"
+                    id="surface"
+                    value="10000"
+                    min="0"
+                    step="1"
+                    oninput="calculer()">
+
+                    <label>
+                    Agricultural Activity
+                    </label>
+
+                    <select
+                    class="form-select mb-3"
+                    id="ratio"
+                    onchange="calculer()">
+
+                    <option value="0.003">
+                    Potatoes - 0.003 m³/m²/day
+                    </option>
+
+                    <option value="0.004">
+                    Open-field vegetables - 0.004 m³/m²/day
+                    </option>
+
+                    <option value="0.006">
+                    Greenhouse vegetables - 0.006 m³/m²/day
+                    </option>
+
+                    <option value="0.001">
+                    Vineyards - 0.001 m³/m²/day
+                    </option>
+
+                    <option value="0.0005">
+                    Olive trees - 0.0005 m³/m²/day
+                    </option>
+
+                    </select>
+
+
+
+                    <label>
+                    Irrigation Cycles per Day
+                    </label>
+
+                    <input
+                    class="form-control mb-3"
+                    type="number"
+                    id="cycles"
+                    value="1"
+                    min="1"
+                    step="1"
+                    oninput="calculer()">
+
+
+                    <hr>
+
+
+                    <h5>2 - Current Water Price</h5>
+
+
+                    <label>
+                    Current Water Price (€ / m³)
+                    </label>
+
+                    <input
+                    class="form-control mb-3"
+                    type="number"
+                    id="prixEau"
+                    value="0.50"
+                    min="0"
+                    step="0.01"
+                    oninput="calculer()">
+
+
+
+                    <hr>
+
+
+                    <h5>3 - Atmospheric Water Generator (AWG)</h5>
+
+
+                    <label>
+                    Machine Water Production (litres/day)
+                    </label>
+
+                    <input
+                    class="form-control mb-3"
+                    type="number"
+                    id="production"
+                    value="10000"
+                    min="0"
+                    step="1"
+                    oninput="calculer()">
+
+
+
+                    <label>
+                    Energy Consumption (kWh/m³)
+                    </label>
+
+                    <input
+                    class="form-control mb-3"
+                    type="number"
+                    id="energie"
+                    value="5"
+                    min="0"
+                    step="0.1"
+                    oninput="calculer()">
+
+
+
+                    <label>
+                    Electricity Price (€ / kWh)
+                    </label>
+
+                    <input
+                    class="form-control mb-3"
+                    type="number"
+                    id="electricite"
+                    value="0.15"
+                    min="0"
+                    step="0.01"
+                    oninput="calculer()">
+
+
+
+                    <label>
+                    Machine Purchase Price (€)
+                    </label>
+
+                    <input
+                    class="form-control mb-3"
+                    type="number"
+                    id="machine"
+                    value="50000"
+                    min="0"
+                    step="100"
+                    oninput="calculer()">
+
+
+
+                    <hr>
+
+
+
+                    <div class="result">
+
+
+                    <h5>Results</h5>
+
+
+                    <p>
+                    Daily Water Requirement:
+                    <b><span id="jour"></span> m³</b>
+                    </p>
+
+
+                    <p>
+                    Weekly Water Requirement:
+                    <b><span id="semaine"></span> m³</b>
+                    </p>
+
+
+                    <p>
+                    Monthly Water Requirement:
+                    <b><span id="mois"></span> m³</b>
+                    </p>
+
+
+                    <p>
+                    Annual Water Requirement:
+                    <b><span id="annee"></span> m³</b>
+                    </p>
+
+
+                    <hr>
+
+
+                    <p>
+                    Annual Cost of Current Water:
+                    <b><span id="coutEau"></span> €</b>
+                    </p>
+
+
+                    <p>
+                    Number of AWG Units Required:
+                    <b><span id="nbMachine"></span></b>
+                    </p>
+
+
+                    <p>
+                    Annual AWG Water Production:
+                    <b><span id="productionAWG"></span> m³</b>
+                    </p>
+
+
+                    <p>
+                    Annual AWG Energy Cost:
+                    <b><span id="coutAWG"></span> €</b>
+                    </p>
+
+
+                    <p>
+                    Estimated Annual Savings:
+                    <b><span id="economie"></span> €</b>
+                    </p>
+
+
+                    <p>
+                    Return on Investment:
+                    <b><span id="roi"></span> years</b>
+                    </p>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
     <section class="card mb-5 shadow-sm border-danger">
         <div class="card-header bg-danger text-white">Research Disclaimer</div>
         <div class="card-body">
@@ -5630,6 +5878,8 @@
 <script src="assets/js/data_electricity_generation.js"></script>
 
 <script src="assets/js/documentation-includes.js"></script>
+
+<script src="assets/js/agricultural_water_awg_calculator.js"></script>
 
 </body>
 </html>
