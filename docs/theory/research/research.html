@@ -1,0 +1,425 @@
+<div class="card">
+    <div class="card-header">
+      Fundamental theoretical research on the Chas Campbell Gravitational Engine
+    </div>
+    <div class="card-body">
+        <ul>
+            <li>
+                <a class="doc-link" href="https://voltorus-industry.github.io/voltorus.github.io/docs/theory/research/chas_campbell_gravitational_engine_research_v1.pdf" target="_blank">
+                    Chas Campbell Gravitational Engine Research - Version 1
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="card">
+<div class="card-header">
+  Course
+</div>
+<div class="card-body">
+  <!-- Fundamental principle of rotating dynamics -->
+  <div class="card">
+    <div class="card-header">
+        Fundamental principle of rotating dynamics
+    </div>
+    <div class="card-body">
+      <h5>
+          We have :
+          <br>
+          \[
+                F_{t} = m * a_{t}
+          \]
+          <br>
+          is the tangential component of the resultant forces.
+          <br>
+          <br>
+          We have :
+          <br>
+          \[
+                C = F_{t} * r
+          \]
+          <br>
+          is the moment of force with respect to the origin in N*m.
+          <br>
+          <br>
+          We have :
+          <br>
+          \[
+                a_{t} = r * \frac{\mathrm d \omega}{\mathrm d t}
+          \]
+      </h5>
+    </div>
+  </div>
+  <!-- Fundamental principle of rotating dynamics -->
+
+  <br>
+
+  <!-- gravitational energy of simple pendulum -->
+  <div class="card">
+    <div class="card-header">
+        Gravitational energy of simple pendulum
+    </div>
+    <div class="card-body">
+      <h5>
+          We have :
+          <br>
+          \[
+                E_{p} = m * g * r * (1 - cos(\theta))
+          \]
+      </h5>
+    </div>
+  </div>
+  <!-- gravitational energy of simple pendulum -->
+
+  <br>
+
+  <!-- Kinetic energy of simple pendulum -->
+  <div class="card">
+    <div class="card-header">
+        Kinetic energy of simple pendulum
+    </div>
+    <div class="card-body">
+      <h5>
+          We have :
+          <br>
+          \[
+                E_{c} = 1/2 * m * V^{2}
+          \]
+          <br>
+          \[
+                E_{c} = 1/2 * m * (\omega * r)^{2}
+          \]
+      </h5>
+    </div>
+  </div>
+  <!-- Kinetic energy of simple pendulum -->
+
+  <br>
+
+  <!-- energy conservation -->
+  <div class="card">
+    <div class="card-header">
+        Energy conservation of simple pendulum
+    </div>
+    <div class="card-body">
+      <h5>
+          We have :
+          <br>
+          \[
+                E_{m} = E_{c} + E_{p}
+          \]
+          <br>
+          is the mechanical energy of the system.
+          <br>
+          <br>
+          \[
+                E_{m} = \frac{1}{2} * m * (\omega * r)^{2} + m * g * r * (1 - cos(\theta))
+          \]
+      </h5>
+    </div>
+  </div>
+  <!-- energy conservation -->
+
+  <br>
+
+  <!-- engine torque -->
+  <div class="card">
+    <div class="card-header">
+        Engine torque
+    </div>
+    <div class="card-body">
+      <h5>
+          We have :
+          <br>
+          \[
+                P_{motor} = C_{motor} * \omega_{motor}
+          \]
+      </h5>
+    </div>
+  </div>
+  <!-- engine torque -->
+
+  <br>
+
+  <!-- pulley-belt ratio -->
+  <div class="card">
+    <div class="card-header">
+        Pulley-belt ratio or drive ratio
+    </div>
+    <div class="card-body">
+      <h5>
+          We have :
+          <br>
+          \[
+                \frac{d_{out}}{d_{in}} = \frac{\omega_{in}}{\omega_{out}} = \frac{C_{out}}{C_{in}}
+          \]
+      </h5>
+    </div>
+  </div>
+  <!-- pulley-belt ratio -->
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+  Proof
+</div>
+<div class="card-body">
+    <h5>
+        We have the schematic of the flywheel :
+
+        <img src="https://voltorus-industry.github.io/voltorus.github.io/docs/theory/chas_campbell_flywheel.png" class="img-fluid" alt="Responsive image">
+
+        <br>
+        <br>
+
+        We have :
+        \[
+            E_{c, flywheel} = M_{flywheel} * (\omega_{flywheel} * r_{flywheel})^{2}
+        \]
+        is the kinetic energy of the flywheel.
+
+        <br>
+        <br>
+
+        We have :
+        \[
+            E_{p, flywheel} = 2 * M_{flywheel} * g * r_{flywheel} * sin(\theta_{flywheel}(t))
+        \]
+        is the potential energy of the flywheel.
+
+        <br>
+        <br>
+
+        We have :
+        \[
+            E_{m,flywheel} = M_{flywheel} * (\omega_{flywheel} * r_{flywheel})^{2}
+            + 2 * M_{flywheel} * g * r_{flywheel} * sin(\theta_{flywheel}(t))
+        \]
+        is the mechanical energy of the flywheel.
+
+        <br>
+        <br>
+
+        We have :
+        \[
+            E_{m,flywheel} = M_{flywheel} * (\frac{\mathrm d \theta_{flywheel}(t)}{\mathrm d t}
+            * r_{flywheel})^{2} + 2 * M_{flywheel} * g * r_{flywheel} * sin(\theta_{flywheel}(t))
+        \]
+        \[
+            E_{m,flywheel} = M_{flywheel} * (\frac{\mathrm d \theta_{flywheel}(t)}{\mathrm d t})^{2}
+            * r_{flywheel}^{2} + 2 * M_{flywheel} * g * r_{flywheel} * sin(\theta_{flywheel}(t))
+        \]
+        \[
+            E_{m, flywheel} = constant
+        \]
+
+        <br>
+        <br>
+
+        In derivating the mechanical energy of the flywheel, we have the moving equation of the flywheel :
+        \[
+            \frac{\mathrm d E_{m, flywheel}}{\mathrm d t} = 0
+        \]
+        \[
+            \frac{\mathrm d E_{m, flywheel}}{\mathrm d t} = 2 * M_{flywheel}
+            * \frac{\mathrm d \theta_{flywheel}(t)}{\mathrm d t}
+            * \frac{\mathrm d^{2} \theta_{flywheel}(t)}{\mathrm d t^{2}} * r_{flywheel}^{2}
+            + 2 * M_{flywheel} * g * r_{flywheel} * cos(\theta_{flywheel}(t))
+        \]
+        \[
+            2 * M_{flywheel} * \frac{\mathrm d \theta_{flywheel}(t)}{\mathrm d t}
+            * \frac{\mathrm d^{2} \theta_{flywheel}(t)}{\mathrm d t^{2}}
+            * r_{flywheel}^{2} + 2 * M_{flywheel} * g * r_{flywheel}
+            * \frac{\mathrm d \theta_{flywheel}(t)}{\mathrm d t}
+            * cos(\theta_{flywheel}(t)) = 0
+        \]
+
+        <br>
+
+        We have :
+        \[
+            \frac{\mathrm d \theta_{flywheel}(t)}{\mathrm d t} \ne 0
+        \]
+        \[
+            \frac{\mathrm d^{2} \theta_{flywheel}(t)}{\mathrm d t^{2}} + \frac{g}{r_{flywheel}}
+            * cos(\theta_{flywheel}(t)) = 0
+        \]
+        \[
+            \omega_{flywheel} = \sqrt{\frac{g}{r_{flywheel}}}
+        \]
+    </h5>
+
+    <!-- Parameters of the motor -->
+    <div class="card">
+      <div class="card-header">
+            Parameters of the motor
+      </div>
+      <div class="card-body">
+         <h5>
+             Let be
+             \[
+                \omega_{motor} = 1500
+             \]
+             the angular speed in turns per minute.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                C_{motor} = 2 * M_{flywheel} * g * r_{flywheel}
+             \]
+             the torque.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                P_{m,motor} = C_{motor} * \omega_{motor}
+             \]
+             \[
+                P_{m,motor} = 2 * M_{flywheel} * g * r_{flywheel} * \omega_{motor}
+             \]
+             the mechanical power.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                P_{e,motor} = P_{m,motor}
+             \]
+             \[
+                P_{e,motor} = 2 * M_{flywheel} * g * r_{flywheel} * \omega_{motor}
+             \]
+             the electrical power if there is no resistance.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                d_{pulley,motor}
+             \]
+             the diameter of the pulley of the motor in meter.
+         </h5>
+      </div>
+    </div>
+    <!-- Parameters of the motor -->
+
+    <br>
+
+    <!-- Parameters of the electrical generator -->
+    <div class="card">
+      <div class="card-header">
+            Parameters of the electrical generator
+      </div>
+      <div class="card-body">
+         <h5>
+             Let be
+             \[
+                \omega_{generator} = 60 * f_{generator}
+             \]
+             \[
+                \omega_{generator} = 60 * 50
+             \]
+             \[
+                \omega_{generator} = 3000
+             \]
+             the angular speed in turns per minute.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                P_{e,generator} = E_{e,generator} * \omega_{generator}
+             \]
+             \[
+                E_{e,generator} = \frac{P_{e,generator}}{\omega_{generator}}
+             \]
+             the electrical power in watts.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                E_{e,generator} = E_{m,flywheel}
+             \]
+             \[
+                M_{flywheel} * (\frac{\mathrm d \theta_{flywheel}(t)}{\mathrm d t})^{2}
+                * r_{flywheel}^{2} + 2 * M_{flywheel} * g * r_{flywheel} * sin(\theta_{flywheel}(t)) =
+                \frac{P_{e,generator}}{\omega_{generator}}
+             \]
+             the electrical energy in joules.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                d_{pulley,generator}
+             \]
+             the diameter of the pulley of the generator in meter.
+         </h5>
+      </div>
+    </div>
+    <!-- Parameters of the electrical generator -->
+
+    <br>
+
+    <!-- Parameters of the flywheel -->
+    <div class="card">
+      <div class="card-header">
+            Parameters of the flywheel
+      </div>
+      <div class="card-body">
+         <h5>
+             Let be
+             \[
+                \omega_{flywheel} = \frac{d_{pulley,motor} * \omega_{motor}}{d_{pulley,flywheel}}
+             \]
+             the angular speed in turns per minute.
+
+             <br>
+             <br>
+
+             Let be
+             \[
+                d_{pulley,flywheel} = \frac{\omega_{generator} * d_{pulley,generator}}{\omega_{flywheel}}
+             \]
+             the diameter of all the pulleys of the flywheel in meter.
+         </h5>
+      </div>
+    </div>
+    <!-- Parameters of the flywheel -->
+
+    <br>
+
+    <h5>
+        We have :
+        \[
+            d_{pulley,generator} = \frac{\omega_{flywheel} * d_{pulley,flywheel}}{\omega_{generator}}
+        \]
+        \[
+            d_{pulley,motor} = \frac{\omega_{flywheel} * d_{pulley,flywheel}}{\omega_{motor}}
+        \]
+
+        <br>
+        <br>
+
+        With
+        \[
+            \theta_{flywheel}(t) = \frac{\pi}{2}
+        \]
+        , we have :
+        \[
+            M_{flywheel} = \frac{P_{e,generator}}{\omega_{generator} * g * r_{flywheel} * 2}
+         \]
+    </h5>
+</div>
+</div>
